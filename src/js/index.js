@@ -17,8 +17,23 @@ const refereshList = () => {
     scoreController.scoresArray.forEach((element, loopIndex) => {
       const singleScore = document.createElement('li');
       singleScore.className = loopIndex % 2 === 0 ? 'list-group-item' : 'list-group-item disabled';
-      const textNode = document.createTextNode(`Name: ${element.user} Score: ${element.score}`);
-      singleScore.appendChild(textNode);
+      const nameNode = document.createElement('span');
+      nameNode.className = 'bold';
+      const nameText = document.createTextNode('Name: ');
+      nameNode.appendChild(nameText);
+
+      const scoreNode = document.createElement('span');
+      scoreNode.className = 'bold bold_middle';
+      const scoreText = document.createTextNode('Score: ');
+      scoreNode.appendChild(scoreText);
+
+      singleScore.appendChild(nameNode);
+      singleScore.appendChild(document.createTextNode(element.user));
+      singleScore.appendChild(scoreNode);
+      singleScore.appendChild(document.createTextNode(element.score));
+
+      // const textNode = document.createTextNode(`Name: ${element.user} Score: ${element.score}`);
+      // singleScore.appendChild(textNode);
       domScoresHolders.appendChild(singleScore);
     });
   });
