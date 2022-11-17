@@ -6,6 +6,18 @@
   min-width: 132px;
 }
 
+#submitBtn {
+  margin-bottom: 10px;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.bold_middle {
+  margin-left: 5px;
+}
+
 .row.equal-cols {
   display: -webkit-flex;
   display: -ms-flexbox;
